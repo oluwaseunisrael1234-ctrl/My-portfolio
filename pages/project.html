@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+   
+</head>
+<body>
+    <main>
+        <!-- particle canvas (global, subtle) -->
+        <canvas id="particle-canvas"></canvas>
+        <section>
+            <nav class="navbar">
+                <div class="logo">Eazy<span class="span">Tech</span></div>
+                
+
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html" class="home">Home</a>
+                    <a href="../pages/project.html" class="Project">Project</a>
+                    <a href="../pages/about.html" class="about">About</a>
+                    <a href="../pages/contact.html" class="contact">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                </div>
+            </nav>
+        </section>
+        
+
+            <section class="page-hero">
+        <div class="pro-container">
+            <h1>Featured Projects</h1>
+            <p>Showcasing my latest work in frontend development and web applications</p>
+        </div>
+    </section>
+
+    <!-- Projects Filter -->
+    <section id="projects-filter" style="margin-top: 30px;">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="javascript">JavaScript</button>
+                <button class="filter-btn" data-filter="responsive">Responsive</button>
+                <button class="filter-btn" data-filter="api">API Integration</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid -->
+    <section id="projects-grid">
+        <div class="container">
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card" data-category="javascript api">
+                    <div class="project-img">
+                        <div class="project-category">JavaScript • API</div>
+                    </div>
+                    <div class="project-content">
+                       <h3>Fedpolel Vendor Hub</h3>
+                            <p>A centralized online platform for Fedpolel vendors to showcase products, connect with other sellers, and manage their online presence efficiently.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Vendor profiles with product listings and performance stats</li>
+                                    <li>Real-time messaging and networking with other local vendors</li>
+                                    <li>Sales analytics and inventory management tools</li>
+                                    <li>Responsive design for desktop and mobile commerce</li>
+                                </ul>
+                            </div>
+
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card" data-category="javascript api responsive">
+                    <div class="project-img">
+                        <div class="project-category">JavaScript • API • Responsive</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Daisy Luxe Beauty Salon</h3>
+                            <p>Daisy Luxe is a modern beauty salon dedicated to providing luxurious treatments and personalized services to help clients look and feel their best.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Professional hair, nail, and skincare services</li>
+                                    <li>Online appointment booking and schedule management</li>
+                                    <li>Loyalty programs and exclusive offers for regular clients</li>
+                                    <li>Responsive design for seamless browsing on all devices</li>
+                                </ul>
+                            </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Responsive Design</span>
+                            <span class="tech-tag">WhatsApp API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://daisyluxe.netlify.app" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card" data-category="javascript pwa responsive">
+                    <div class="project-img">
+                        <div class="project-category">PWA • JavaScript • Responsive</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Polytechnic Course Allocation System</h3>
+                            <p>A web application designed to manage and streamline course registration, allocation, and student scheduling in a polytechnic environment.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Automated course registration and allocation for students</li>
+                                    <li>Real-time timetable and schedule management</li>
+                                    <li>Offline access for viewing course assignments</li>
+                                    <li>Cross-device access for students and administrators</li>
+                                </ul>
+                            </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">PHP</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="project-card" data-category="javascript api">
+                    <div class="project-img">
+                        <div class="project-category">JavaScript • API</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Luxury Bag Collection</h3>
+                            <p>An online platform showcasing a curated collection of luxury and designer bags, offering real-time inventory updates and easy shopping experience.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Real-time product availability and stock updates</li>
+                                    <li>Interactive product gallery with zoom and 360° views</li>
+                                    <li>Location-based shipping and delivery options</li>
+                                    <li>Customizable alerts for new arrivals and special offers</li>
+                                </ul>
+                            </div>
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WhatsApp API</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="project-card" data-category="javascript responsive">
+                    <div class="project-img">
+                        <div class="project-category">JavaScript • Responsive</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Eliza Couture Fashion Design School</h3>
+                            <p>A premier fashion design school offering comprehensive courses in fashion, styling, and garment creation, with hands-on learning and mentorship programs.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Hands-on fashion design workshops and tutorials</li>
+                                    <li>Structured course curriculum with skill progression</li>
+                                    <li>Collaborative student projects and portfolio building</li>
+                                    <li>Flexible learning options including online and in-person classes</li>
+                                </ul>
+                            </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">WhatsApp API</span>
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">Responsive Design</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6 -->
+                <div class="project-card" data-category="pwa api">
+                    <div class="project-img">
+                        <div class="project-category">PWA • API</div>
+                    </div>
+                    <div class="project-content">
+                        <h3>Valentine’s Celebration Hub</h3>
+                            <p>A romantic website for planning Valentine’s Day surprises, gifting ideas, and special date experiences for couples.</p>
+                            <div class="project-features">
+                                <ul>
+                                    <li>Discover romantic date ideas and activities</li>
+                                    <li>Curated gift suggestions for your loved one</li>
+                                    <li>Create personalized Valentine’s plans and reminders</li>
+                                    <li>Access ideas and content offline for easy planning</li>
+                                </ul>
+                            </div>
+
+                        <div class="project-tech">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-primary btn-small"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+                            <a href="#" class="btn btn-secondary btn-small"><i class="fab fa-github"></i> GitHub</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Stats -->
+    <section class="section-alt">
+        <div class="container" style="margin-top: 40px;">
+            <div class="stats-grid" style="margin-bottom: 15px;">
+                <div class="stat-item">
+                    <h3>50+</h3>
+                    <p>Projects Completed</p>
+                </div>
+                <div class="stat-item">
+                    <h3>99.9%</h3>
+                    <p>Client Satisfaction</p>
+                </div>
+                <div class="stat-item">
+                    <h3>40+</h3>
+                    <p>Happy Clients</p>
+                </div>
+                <div class="stat-item">
+                    <h3>5+</h3>
+                    <p>Years Experience</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Have a Project in Mind?</h2>
+            <p>Let's work together to bring your ideas to life with exceptional frontend development.</p>
+            <a href="contact.html" class="btn btn-primary">Start a Project</a>
+        </div>
+    </section>
+
+
+    <section>
+        <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">Eazy<span>Tech</span></a>
+                
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/project.html">Projects</a>
+                    <a href="../pages/contact.html">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://codepen.io" target="_blank"><i class="fab fa-codepen"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Eazy Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+
+    </main>
+    <script src="../main.js" defer></script>
+<script src="../script.js" defer></script>
+
+      <script>
+    // home-specific: load featured projects + skills progress, init typewriter
+    document.addEventListener('DOMContentLoaded', function() {
+      loadFeaturedProjects();
+      loadSkillsSnapshot();
+      initTypewriter();
+    });
+  </script>
+</body>
+</html>

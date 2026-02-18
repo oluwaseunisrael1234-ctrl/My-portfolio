@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My portfolio</title>
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:ital,wght@0,400;0,600;1,500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style.css">
+   
+</head>
+<body>
+    <main>
+        <!-- particle canvas (global, subtle) -->
+        <canvas id="particle-canvas"></canvas>
+        <section>
+            <nav class="navbar">
+                <div class="logo">Eazy<span class="span">Tech</span></div>
+                
+
+                <div class="nav-links" id="navLinks">
+                    <a href="../index.html" class="home">Home</a>
+                    <a href="../pages/project.html" class="Project">Project</a>
+                    <a href="../pages/about.html" class="about">About</a>
+                    <a href="../pages/contact.html" class="contact">Contact</a>
+                </div>
+                <div class="nav-actions">
+                    <button id="themeToggle" class="theme-toggle"><i class="fas fa-moon"></i></button>
+
+                <button class="mobile-menu-btn" id="mobileMenuBtn">
+                    <i class="fas fa-bars"></i>
+                </button>
+                </div>
+            </nav>
+        </section>
+        
+        <!-- Page Hero -->
+    <section class="contact-hero">
+        <div class=" contact-container" >
+            <h1>Get In Touch</h1>
+            <p>Let's discuss your project and how I can help bring your ideas to life</p>
+        </div>
+    </section>
+
+    <!-- Contact Content -->
+    <section id="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <!-- Contact Info -->
+                <div class="contact-info">
+                    <h2>Let's Build Something Great Together</h2>
+                    <p>Have a project in mind? I'd love to hear about it. Send me a message and let's discuss how we can create an exceptional digital experience for your users.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Email</h4>
+                                <p>eazytech@gmail.com</p>
+                                <a href="mailto:eazytech@gmail.com" class="detail-link">Send an email</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-phone-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Phone</h4>
+                                <p>09135134601</p>
+                                <a href="tel:09135134601" class="detail-link">Call now</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Location</h4>
+                                <p>Akure, Ondo state</p>
+                                <p class="detail-note">Available for remote work worldwide</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-detail">
+                            <div class="detail-icon">
+                                <i class="fas fa-clock"></i>
+                            </div>
+                            <div class="detail-content">
+                                <h4>Availability</h4>
+                                <p>Monday - Sunday</p>
+                                <p>7:00 AM - 6:00 PM </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-social">
+                        <h4>Connect with me</h4>
+                        <div class="social-buttons">
+                            <a href="https://github.com" target="_blank" class="social-btn">
+                                <i class="fab fa-github"></i>
+                                <span>GitHub</span>
+                            </a>
+                            <a href="https://linkedin.com" target="_blank" class="social-btn">
+                                <i class="fab fa-linkedin-in"></i>
+                                <span>LinkedIn</span>
+                            </a>
+                            <a href="https://twitter.com" target="_blank" class="social-btn">
+                                <i class="fab fa-twitter"></i>
+                                <span>Twitter</span>
+                            </a>
+                            <a href="https://codepen.io" target="_blank" class="social-btn">
+                                <i class="fab fa-codepen"></i>
+                                <span>CodePen</span>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <a href="https://wa.me/08132030245" class="btn whatsapp-btn">
+                        <i class="fab fa-whatsapp"></i> Message on WhatsApp
+                    </a>
+                </div>
+                
+                <!-- Contact Form -->
+                <div class="contact-form-container">
+                    <div class="contact-form-header">
+                        <h3>Send a Message</h3>
+                        <p>Fill out the form below and I'll get back to you within 24 hours</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name *</label>
+                                <input type="text" id="name" class="form-control" placeholder="Your name" required>
+                                <div class="error-message" id="nameError"></div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="email">Email Address *</label>
+                                <input type="email" id="email" class="form-control" placeholder="your.email@example.com" required>
+                                <div class="error-message" id="emailError"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="company">Company (Optional)</label>
+                            <input type="text" id="company" class="form-control" placeholder="Your company name">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject">Subject *</label>
+                            <input type="text" id="subject" class="form-control" placeholder="What is this regarding?" required>
+                            <div class="error-message" id="subjectError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="project-type">Project Type *</label>
+                            <select id="project-type" class="form-control" required>
+                                <option value="" disabled selected>Select project type</option>
+                                <option value="website">Website Development</option>
+                                <option value="optimization">Business website</option>
+                                <option value="redesign">Website Redesign</option>
+                                <option value="ecommerce">E-commerce Store</option>
+                                <option value="pwa">Landing pages</option>
+                                <option value="optimization">Performance Optimization</option>
+                                <option value="other">Other</option>
+                            </select>
+                            <div class="error-message" id="projectTypeError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="budget">Project Budget (Optional)</label>
+                            <select id="budget" class="form-control">
+                                <option value="" selected>Select budget range</option>
+                                <option value="1-2k">$250 - $1,000</option>
+                                <option value="2-5k">$2,000 - $5,000</option>
+                                <option value="5-10k">$5,000 - $10,000</option>
+                                <option value="10k+">$10,000+</option>
+                                <option value="undecided">Not sure yet</option>
+                            </select>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details *</label>
+                            <textarea id="message" class="form-control" placeholder="Tell me about your project, goals, timeline, and any specific requirements..." rows="6" required></textarea>
+                            <div class="error-message" id="messageError"></div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="newsletter" checked>
+                                <label for="newsletter">Subscribe to occasional updates about web development insights and tips (you can unsubscribe anytime)</label>
+                            </div>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <i class="fas fa-paper-plane"></i> Send Message
+                        </button>
+                        
+                        <div class="form-success" id="formSuccess">
+                            <i class="fas fa-check-circle"></i>
+                            <div>
+                                <h4>Thank you for your message!</h4>
+                                <p>we've received your inquiry and will get back to you within 24 hours. I look forward to discussing your project!</p>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Preview -->
+    <section class="section-alt">
+        <div class="container">
+            <h2>Common Questions</h2>
+            <div class="faq-preview">
+                <div class="faq-item">
+                    <h3>How soon can you start my project?</h3>
+                    <p>I typically have availability starting within 1-2 weeks of project confirmation. For urgent projects, please indicate your timeline in your message.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>Do you work with international clients?</h3>
+                    <p>Yes! I work with clients worldwide. All communication and collaboration are done remotely via email, video calls, and project management tools.</p>
+                </div>
+                <div class="faq-item">
+                    <h3>What information should I include in my project inquiry?</h3>
+                    <p>Please include details about your project goals, target audience, timeline, budget range, and any specific requirements or features you need.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section>
+        <footer>
+        <div class="container">
+            <div class="footer-content">
+                <a href="index.html" class="logo">Eazy<span>Tech</span></a>
+                
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../pages/about.html">About</a>
+                    <a href="../pages/project.html">Projects</a>
+                    <a href="../pages/contact.html">Contact</a>
+                </div>
+                
+                <div class="social-links">
+                    <a href="https://github.com" target="_blank"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+                    <a href="https://codepen.io" target="_blank"><i class="fab fa-codepen"></i></a>
+                </div>
+            </div>
+            
+            <div class="copyright">
+                <p>&copy; <span id="currentYear"></span> Eazy Tech. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    </section>
+
+    </main>
+    <script src="../main.js" defer></script>
+<script src="../script.js" defer></script>
+
+      <script>
+    // home-specific: load featured projects + skills progress, init typewriter
+    document.addEventListener('DOMContentLoaded', function() {
+      loadFeaturedProjects();
+      loadSkillsSnapshot();
+      initTypewriter();
+    });
+  </script>
+</body>
+</html>
