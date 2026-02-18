@@ -170,89 +170,111 @@ function initFAQAccordion() {
     });
 }
 
-// Form Validation
 function initFormValidation() {
     if (!contactForm) return;
-    
+
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
+
         // Get form elements
         const name = document.getElementById('name');
         const email = document.getElementById('email');
+        const company = document.getElementById('company');
         const subject = document.getElementById('subject');
         const projectType = document.getElementById('project-type');
+        const budget = document.getElementById('budget');
         const message = document.getElementById('message');
-        
+        const newsletter = document.getElementById('newsletter');
+
         // Reset error messages
         document.querySelectorAll('.error-message').forEach(error => {
             error.style.display = 'none';
             error.textContent = '';
         });
-        
-        // Reset form field styles
+
+        // Reset field borders
         [name, email, subject, projectType, message].forEach(field => {
-            if (field) {
-                field.style.borderColor = '';
-            }
+            if (field) field.style.borderColor = '';
         });
-        
+
         let isValid = true;
-        
-        // Validate name
-        if (name && name.value.trim() === '') {
+
+        // Validate fields
+        if (name.value.trim() === '') {
             showError(name, 'nameError', 'Please enter your name');
             isValid = false;
         }
-        
-        // Validate email
-        if (email) {
-            const emailValue = email.value.trim();
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            
-            if (emailValue === '') {
-                showError(email, 'emailError', 'Please enter your email');
-                isValid = false;
-            } else if (!emailRegex.test(emailValue)) {
-                showError(email, 'emailError', 'Please enter a valid email address');
-                isValid = false;
-            }
+
+        const emailValue = email.value.trim();
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (emailValue === '') {
+            showError(email, 'emailError', 'Please enter your email');
+            isValid = false;
+        } else if (!emailRegex.test(emailValue)) {
+            showError(email, 'emailError', 'Please enter a valid email address');
+            isValid = false;
         }
-        
-        // Validate subject
-        if (subject && subject.value.trim() === '') {
+
+        if (subject.value.trim() === '') {
             showError(subject, 'subjectError', 'Please enter a subject');
             isValid = false;
         }
-        
-        // Validate project type
-        if (projectType && projectType.value === '') {
+
+        if (projectType.value === '') {
             showError(projectType, 'projectTypeError', 'Please select a project type');
             isValid = false;
         }
-        
-        // Validate message
-        if (message && message.value.trim() === '') {
+
+        if (message.value.trim() === '') {
             showError(message, 'messageError', 'Please enter your message');
             isValid = false;
-        } else if (message && message.value.trim().length < 10) {
+        } else if (message.value.trim().length < 10) {
             showError(message, 'messageError', 'Message must be at least 10 characters');
             isValid = false;
         }
-        
-        // If form is valid, show success message
-        if (isValid && formSuccess) {
-            // In a real application, you would send the form data to a server here
-            // For this demo, we'll just show the success message
-            formSuccess.style.display = 'flex';
-            contactForm.reset();
-            
-            // Hide success message after 5 seconds
-            setTimeout(() => {
-                formSuccess.style.display = 'none';
-            }, 5000);
+
+        // Helper for error display
+        function showError(field, errorId, message) {
+            const errorElement = document.getElementById(errorId);
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.style.display = 'block';
+            }
+            if (field) field.style.borderColor = 'var(--error)';
+        }
+
+        // If form is valid, send all details to WhatsApp
+        if (isValid) {
+            const whatsappMessage = `
+Hello! EazyTech i would love you to build a website for me:
+
+Full Name: ${name.value.trim()}
+Email: ${email.value.trim()}
+Company: ${company.value.trim() || 'N/A'}
+Subject: ${subject.value.trim()}
+Project Type: ${projectType.value}
+Budget: ${budget.value || 'N/A'}
+Message: ${message.value.trim()}
+Subscribe to newsletter: ${newsletter.checked ? 'Yes' : 'No'}
+`;
+
+            const encodedMessage = encodeURIComponent(whatsappMessage);
+           const phoneNumber = "2348132030245";
+
+            // Open WhatsApp with the message
+            window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, '_blank');
+
+            // Optional: show success message locally
+            if (formSuccess) {
+                formSuccess.style.display = 'flex';
+                contactForm.reset();
+                setTimeout(() => {
+                    formSuccess.style.display = 'none';
+                }, 5000);
+            }
         }
     });
+
     
     // Helper function to show error messages
     function showError(field, errorId, message) {
@@ -334,35 +356,41 @@ if (window.location.pathname.includes('projects.html')) {
     });
 }
 
-// Add CSS for animations
-const style = document.createElement('style');
+/// Add CSS for animations
+const style = document.createElement("style");
+
 style.textContent = `
-    .animate-in {
-        animation: fadeIn 0.6s ease forwards;
+  .animate-in {
+    animation: fadeIn 0.6s ease forwards;
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(30px);
     }
-    
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-            transform: translateY(30px);
-        }
-        to {
-            opacity: 1;
-            transform: translateY(0);
-        }
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-    
-    .project-card, .service-card {
-        opacity: 0;
-        transform: translateY(30px);
-        transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .project-card.animate-in, .service-card.animate-in {
-        opacity: 1;
-        transform: translateY(0);
-    }
+  }
+
+  .project-card,
+  .service-card {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  .project-card.animate-in,
+  .service-card.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+  }
 `;
+
+document.head.appendChild(style);
+
 document.head.appendChild(style);
 
 // Initialize on page load

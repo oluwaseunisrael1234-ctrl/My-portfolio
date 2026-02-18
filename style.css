@@ -604,6 +604,9 @@ footer {
     color: var(--primary);
     margin-bottom: 0.5rem;
 }
+.dark .stat-item p{
+    color: var(--bg-light);
+}
 
 
 .dark .project-content{
