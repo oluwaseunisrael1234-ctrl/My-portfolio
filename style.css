@@ -1263,5 +1263,10 @@ textarea.form-control {
         justify-content: center;
     }
 }
+@media (max-width: 768px) {
+    .hero-container{
+        margin-top: 470px;
+    }
+}
 
 
