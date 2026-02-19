@@ -33,7 +33,6 @@ body {
   line-height: 1.6;
   transition: background-color 0.3s, color 0.3s;
   position: relative;
- 
 }
 
 body.dark {
@@ -47,7 +46,6 @@ body.dark footer {
   background-color: var(--surface-dark);
   border-color: var(--border-dark);
 }
-
 
 a {
   text-decoration: none;
@@ -91,8 +89,6 @@ body.dark .nav-links a{
  color: var(--bg-light);
 }
 
-
-
 .logo {
   font-weight: 750;
   font-size: 1.9rem;
@@ -101,7 +97,6 @@ body.dark .nav-links a{
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
 
 .nav-links {
   display: flex;
@@ -139,19 +134,15 @@ body.dark .nav-links a{
     z-index: 1001;
 }
 
-
 .nav-actions {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
 
-
-
 body.dark .mobile-menu-btn {
   color: var(--text-dark);
 }
-
 
 .theme-toggle {
   background: none;
@@ -180,7 +171,6 @@ body.dark .mobile-menu-btn {
   height: 300px;
   border-radius: 50%;
 }
-
 
 .btn {
     display: inline-flex;
@@ -228,6 +218,87 @@ body.dark .mobile-menu-btn {
     padding: 0.6rem 1.2rem;
     font-size: 0.9rem;
 }
+
+.cta-buttons{
+  margin-top: 40px;
+}
+
+.hero-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 400px;
+    max-width: 100%;
+    margin-top: 75px;
+}
+.hero-content {
+ padding: 30px 50px;
+}
+.hero-content h1{
+  font-size: 3.5rem;
+  margin-bottom: 10px;
+
+}
+.hero-content p{
+  font-size: 1.2rem;
+  
+}
+.hero-content span{
+  color: var(--primary-deep);
+}
+
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.card {
+  background: white;
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  border: 1px solid var(--border-light);
+}
+
+body.dark .card {
+  background: var(--surface-dark);
+  border-color: var(--border-dark);
+    color: var(--bg-light);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-md);
+}
+.resume-link{
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+.dark .resume-link{
+  color: var(--accent);
+}
+
+/* Remaining CSS unchanged but with dark mode fixes on mobile applied */
+
+/* MOBILE FIXES */
+@media (max-width: 768px) {
+  .nav-links {
+    background-color: var(--bg-light);
+  }
+  body.dark .nav-links {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+  .contact-detail {
+    background-color: white;
+  }
+  body.dark .contact-detail {
+    background-color: var(--surface-dark);
+    color: var(--text-dark);
+  }
+}
+
 
 .cta-buttons{
   margin-top: 40px;
