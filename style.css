@@ -1272,14 +1272,9 @@ textarea.form-control {
     text-align: center;
     margin-top: 510px;
 }
-.cta-buttons {
-    justify-content: center;
-    padding: 15px 0;
- 
-}
-}
-@media (max-width: 950px) {
-   .hero-container img {
-    text-align: center;
+
+
+    .hero-container img {
+    margin-top: 550px;
 }
 }
