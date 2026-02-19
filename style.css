@@ -1263,3 +1263,18 @@ textarea.form-control {
         justify-content: center;
     }
 }
+
+
+@media (min-width: 300px) {
+    .hero-container {
+    flex-direction: column-reverse;
+    margin: auto;
+    text-align: center;
+    margin-top: 510px;
+}
+.cta-buttons {
+    justify-content: center;
+    padding: 15px 0;
+ 
+}
+}
