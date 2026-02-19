@@ -294,7 +294,7 @@ body.dark .card {
     background-color: white;
   }
   body.dark .contact-detail {
-    background-color: var(--surface-dark);
+    background-color: var(--bg-light);
     color: var(--text-dark);
   }
 }
@@ -891,6 +891,7 @@ footer {
     gap: 1rem;
     margin-top: 1rem;
 }
+
 
 .social-btn {
     display: flex;
