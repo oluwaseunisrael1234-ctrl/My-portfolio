@@ -1265,16 +1265,3 @@ textarea.form-control {
 }
 
 
-@media (min-width: 300px) {
-    .hero-container {
-    flex-direction: column-reverse;
-    margin: auto;
-    text-align: center;
-    margin-top: 510px;
-}
-
-
-    .hero-container img {
-    margin-top: 550px;
-}
-}
