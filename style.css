@@ -1278,3 +1278,13 @@ textarea.form-control {
  
 }
 }
+
+@media (max-width: 900px) {
+    .hero-container {
+    flex-direction: row;
+    margin: auto;
+    text-align: center;
+
+}
+
+}
